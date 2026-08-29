@@ -1,0 +1,9 @@
+{
+  "name": "Test OPE Osakidetza",
+  "short_name": "OPE Osakidetza",
+  "start_url": "/opeosakidetza/",
+  "display": "standalone",
+  "background_color": "#f6f8fa",
+  "theme_color": "#116b6d",
+  "icons": []
+}

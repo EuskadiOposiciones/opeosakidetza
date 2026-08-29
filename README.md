@@ -1,37 +1,34 @@
-# Web GitHub Pages — OPE Osakidetza
+# OPE Osakidetza — Web V4
 
-Micrositio estático preparado para promocionar la app Android de Test OPE Osakidetza.
+URL: https://euskadioposiciones.github.io/opeosakidetza/
 
-## Arquitectura SEO
-- `/` — intención general: OPE Osakidetza / test Osakidetza / batería Osakidetza
-- `/celador/`
-- `/operario/`
-- `/tcae/`
-- `/auxiliar-administrativo/`
-- `/administrativo/`
-- `/enfermeria/`
-- `/radiodiagnostico/`
-- `/laboratorio/`
-- `/baterias-oficiales/`
+## Objetivo
+Micrositio SEO + conversión para la app Android `Test OPE Osakidetza 2023/2026`.
 
-Cada categoría tiene una intención principal propia para evitar concentrarlo todo en una única landing.
+## Arquitectura
+- `/` → intención general / producto
+- `/ope-osakidetza-2026/` → intención informativa de convocatoria
+- `/baterias-oficiales/` → búsqueda de baterías / PDFs / fuentes
+- `/respuestas-bateria-osakidetza/` → búsqueda de respuestas/corrección
+- `/simulacro-osakidetza/` → intención de práctica
+- 8 páginas de categoría → long-tail específico
 
-## Modelo de venta reflejado
-- 25 preguntas gratis por categoría
-- desbloqueo completo mediante pago único
-- sin suscripción mensual
-- CTA directo a Google Play
+## Cambios V4
+- evidencia oficial arriba de la página
+- fuentes primarias enlazadas
+- recuentos de batería común + específica cuando están verificados
+- una intención principal por URL
+- enlaces internos semánticos
+- copia comercial basada en “prueba antes de pagar”
+- 25 preguntas gratis + pago único + sin suscripción
+- 1.000+ descargas como prueba social verificable en Google Play
+- distinción visible entre batería oficial y corrección de estudio
+- aviso de posibles correcciones/republicaciones oficiales
+- Search Console verification preservada
+- canonical + sitemap + robots
+- enlaces a Google Play con referrer de campaña
+- páginas no soportadas por la app NO se crean para evitar SEO débil
 
 ## Publicación
-1. Crea un repositorio público en GitHub.
-2. Sube el contenido de esta carpeta a la raíz del repositorio.
-3. Settings → Pages → Deploy from a branch → main → /(root).
-4. Cuando conozcas la URL pública definitiva, vuelve a ChatGPT para añadir:
-   - canonical
-   - sitemap.xml con URLs absolutas
-   - Open Graph URL
-   - Google Search Console
-   - Google Analytics (si decides usarlo)
-
-## Nota legal
-`legal.html` y `privacy.html` son borradores y deben completarse con los datos reales del titular y las condiciones aplicables antes del lanzamiento comercial definitivo.
+Subir TODO el contenido a la raíz del repositorio `opeosakidetza`, reemplazando los archivos existentes.
+No es necesario borrar los archivos `google*.html` ya existentes.

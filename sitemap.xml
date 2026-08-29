@@ -2,32 +2,54 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://euskadioposiciones.github.io/opeosakidetza/</loc>
+    <lastmod>2026-08-29</lastmod>
   </url>
   <url>
-    <loc>https://euskadioposiciones.github.io/opeosakidetza/administrativo/</loc>
-  </url>
-  <url>
-    <loc>https://euskadioposiciones.github.io/opeosakidetza/auxiliar-administrativo/</loc>
+    <loc>https://euskadioposiciones.github.io/opeosakidetza/ope-osakidetza-2026/</loc>
+    <lastmod>2026-08-29</lastmod>
   </url>
   <url>
     <loc>https://euskadioposiciones.github.io/opeosakidetza/baterias-oficiales/</loc>
+    <lastmod>2026-08-29</lastmod>
+  </url>
+  <url>
+    <loc>https://euskadioposiciones.github.io/opeosakidetza/respuestas-bateria-osakidetza/</loc>
+    <lastmod>2026-08-29</lastmod>
+  </url>
+  <url>
+    <loc>https://euskadioposiciones.github.io/opeosakidetza/simulacro-osakidetza/</loc>
+    <lastmod>2026-08-29</lastmod>
   </url>
   <url>
     <loc>https://euskadioposiciones.github.io/opeosakidetza/celador/</loc>
-  </url>
-  <url>
-    <loc>https://euskadioposiciones.github.io/opeosakidetza/enfermeria/</loc>
-  </url>
-  <url>
-    <loc>https://euskadioposiciones.github.io/opeosakidetza/laboratorio/</loc>
+    <lastmod>2026-08-29</lastmod>
   </url>
   <url>
     <loc>https://euskadioposiciones.github.io/opeosakidetza/operario/</loc>
-  </url>
-  <url>
-    <loc>https://euskadioposiciones.github.io/opeosakidetza/radiodiagnostico/</loc>
+    <lastmod>2026-08-29</lastmod>
   </url>
   <url>
     <loc>https://euskadioposiciones.github.io/opeosakidetza/tcae/</loc>
+    <lastmod>2026-08-29</lastmod>
+  </url>
+  <url>
+    <loc>https://euskadioposiciones.github.io/opeosakidetza/auxiliar-administrativo/</loc>
+    <lastmod>2026-08-29</lastmod>
+  </url>
+  <url>
+    <loc>https://euskadioposiciones.github.io/opeosakidetza/administrativo/</loc>
+    <lastmod>2026-08-29</lastmod>
+  </url>
+  <url>
+    <loc>https://euskadioposiciones.github.io/opeosakidetza/enfermeria/</loc>
+    <lastmod>2026-08-29</lastmod>
+  </url>
+  <url>
+    <loc>https://euskadioposiciones.github.io/opeosakidetza/laboratorio/</loc>
+    <lastmod>2026-08-29</lastmod>
+  </url>
+  <url>
+    <loc>https://euskadioposiciones.github.io/opeosakidetza/radiodiagnostico/</loc>
+    <lastmod>2026-08-29</lastmod>
   </url>
 </urlset>
