@@ -29,8 +29,14 @@
 </div></nav></div></header>
 <main><section class="category-hero"><div class="wrap"><h1>Privacidad</h1><p class="lead">Información básica sobre esta web estática.</p></div></section>
 <section><div class="wrap"><div class="source-box">
-<p>Esta versión de la web no incorpora formularios de registro propios. Los enlaces a Google Play y a las páginas oficiales llevan a servicios externos con sus propias políticas.</p>
-<p>El sitio todavía no incorpora Google Analytics. Si se activa analítica, publicidad, formularios o cookies no esenciales, esta política deberá actualizarse y deberá implementarse el mecanismo de consentimiento que corresponda.</p>
+<h2>Analítica de uso con privacidad por diseño</h2>
+<p>Esta web utiliza <strong>PostHog Cloud EU</strong> para obtener estadísticas agregadas sobre el uso del sitio y mejorar su contenido, navegación y conversión hacia la aplicación.</p>
+<p>La integración está configurada en <strong>modo cookieless</strong>: PostHog no establece cookies ni utiliza <code>localStorage</code> o <code>sessionStorage</code> para esta medición. Tampoco se crean perfiles personales, no se graban sesiones, no se capturan formularios y se ha desactivado la captura automática de interacciones.</p>
+<p>Se registran únicamente eventos necesarios para evaluar la utilidad de la web: visitas a páginas, clics hacia Google Play, clics a fuentes oficiales de Osakidetza, selección de categorías y dos hitos agregados de profundidad de lectura (50 % y 90 %).</p>
+<p>El proyecto de PostHog está configurado con <strong>anonimización de IP</strong>. Como cualquier servicio web, pueden procesarse datos técnicos necesarios para transmitir la petición; PostHog utiliza en modo cookieless un identificador basado en hash generado en sus servidores para realizar mediciones agregadas sin almacenamiento persistente en el navegador.</p>
+<h2>Servicios externos</h2>
+<p>Esta web no incorpora formularios de registro propios. Los enlaces a Google Play y a las páginas oficiales de Osakidetza llevan a servicios externos con sus propias políticas de privacidad.</p>
+<p>Si en el futuro se incorporan publicidad, formularios, cookies, grabaciones de sesión u otras tecnologías de seguimiento, esta política se actualizará y se aplicarán los mecanismos de información o consentimiento que correspondan.</p>
 </div></div></section></main><footer><div class="wrap footergrid">
 <div><strong>OPE Osakidetza · herramienta independiente</strong><br>
 No pertenece a Osakidetza ni está patrocinada o avalada por la Administración.</div>
@@ -42,4 +48,5 @@ No pertenece a Osakidetza ni está patrocinada o avalada por la Administración.
 </div></div></footer>
 <div class="mobile-cta"><a class="btn" data-play href="https://play.google.com/store/apps/details?id=com.jocyf.opeosakidetzabateria&hl=es&referrer=utm_source%3Dgithub_pages%26utm_medium%3Dweb%26utm_campaign%3Dope_osakidetza" target="_blank" rel="noopener">25 preguntas gratis en la app</a></div>
 <script src="assets/app.js"></script>
+<script defer src="/opeosakidetza/assets/analytics.js"></script>
 </body></html>
