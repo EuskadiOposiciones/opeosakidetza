@@ -1,0 +1,16 @@
+URL pública definitiva:
+https://euskadioposiciones.github.io/opeosakidetza/
+
+Este paquete añade:
+- canonical absoluto por página
+- og:url por página
+- sitemap.xml
+- robots.txt apuntando al sitemap
+- noindex en 404.html
+
+Después de subirlo y desplegarlo:
+1. abrir https://euskadioposiciones.github.io/opeosakidetza/sitemap.xml
+2. añadir la propiedad de prefijo de URL en Google Search Console
+3. verificar propiedad
+4. enviar sitemap.xml
+5. solicitar indexación de portada y páginas de categoría
