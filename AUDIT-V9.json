@@ -1,0 +1,122 @@
+{
+  "indexable_pages": 16,
+  "broken_internal_links": [],
+  "duplicate_titles": {},
+  "duplicate_descriptions": {},
+  "json_ld_errors": [],
+  "unexpected_noindex": [],
+  "pages": [
+    [
+      "administrativo/index.html",
+      "Test Administrativo Osakidetza 2026 | 500 preguntas",
+      1,
+      true,
+      593
+    ],
+    [
+      "auxiliar-administrativo/index.html",
+      "Test Auxiliar Administrativo Osakidetza 2026 | 500 preguntas",
+      1,
+      true,
+      679
+    ],
+    [
+      "baterias-oficiales/index.html",
+      "Baterías Osakidetza 2026 | PDF, versiones y preguntas",
+      1,
+      true,
+      742
+    ],
+    [
+      "celador/index.html",
+      "Test Celador Osakidetza 2026 | Batería y fuentes",
+      1,
+      true,
+      543
+    ],
+    [
+      "enfermeria/index.html",
+      "Test Enfermería Osakidetza 2026 | Batería y fuentes",
+      1,
+      true,
+      547
+    ],
+    [
+      "fase-2-osakidetza-2026/index.html",
+      "Fase II OPE Osakidetza 2026 | 41 categorías y fechas de examen",
+      1,
+      true,
+      755
+    ],
+    [
+      "index.html",
+      "Test Osakidetza 2026 | Baterías oficiales, fechas y categorías",
+      1,
+      true,
+      1107
+    ],
+    [
+      "it-txartela-osakidetza/index.html",
+      "IT Txartela Osakidetza 2026 | Requisitos Administrativo y Auxiliar",
+      1,
+      true,
+      471
+    ],
+    [
+      "laboratorio/index.html",
+      "Test Técnico Laboratorio Osakidetza 2026 | Batería y fuentes",
+      1,
+      true,
+      556
+    ],
+    [
+      "ope-osakidetza-2026/index.html",
+      "OPE Osakidetza 2026 | Estado, Fase I, Fase II y baterías",
+      1,
+      true,
+      453
+    ],
+    [
+      "operario/index.html",
+      "Test Operario Osakidetza 2026 | Batería y fuentes",
+      1,
+      true,
+      547
+    ],
+    [
+      "radiodiagnostico/index.html",
+      "Test Radiodiagnóstico Osakidetza 2026 | 500 preguntas",
+      1,
+      true,
+      1195
+    ],
+    [
+      "respuestas-bateria-osakidetza/index.html",
+      "Respuestas batería Osakidetza 2026 | Oficial vs. estudio",
+      1,
+      true,
+      623
+    ],
+    [
+      "resultados-ope-osakidetza-2026/index.html",
+      "Resultados OPE Osakidetza 2026 | Fase I, aprobados y reclamaciones",
+      1,
+      true,
+      345
+    ],
+    [
+      "simulacro-osakidetza/index.html",
+      "Simulacro Osakidetza 2026 | Calculadora de preguntas al día",
+      1,
+      true,
+      498
+    ],
+    [
+      "tcae/index.html",
+      "Test TCAE Osakidetza 2026 | Batería y fuentes",
+      1,
+      true,
+      548
+    ]
+  ]
+}

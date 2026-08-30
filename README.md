@@ -1,3 +1,7 @@
+## V9 — Centro de control de batería (30/08/2026)
+
+Versión orientada a trazabilidad, control de versiones y utilidad de estudio. Ver `CHANGELOG-V9.md`.
+
 # OPE Osakidetza — Web V6
 
 URL: https://euskadioposiciones.github.io/opeosakidetza/

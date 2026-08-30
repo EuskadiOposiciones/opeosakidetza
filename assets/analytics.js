@@ -166,4 +166,16 @@
     if (reached[50] && reached[90]) window.removeEventListener('scroll', onScroll);
   }
   window.addEventListener('scroll', onScroll, { passive: true });
+
+  // V9: utilidad de planificación. Se capturan solo cifras agregadas introducidas en la herramienta; no texto libre.
+  document.addEventListener('ope:studyplan', function (ev) {
+    var d = (ev && ev.detail) || {};
+    capture('study_plan_calculated', {
+      study_plan_category: String(d.category || 'manual').slice(0, 60),
+      questions_total: Number(d.questions_total || 0),
+      days_until_exam: Number(d.days_until_exam || 0),
+      full_rounds: Number(d.full_rounds || 0),
+      questions_per_day: Number(d.questions_per_day || 0)
+    });
+  });
 })();
