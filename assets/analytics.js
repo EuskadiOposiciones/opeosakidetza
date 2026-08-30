@@ -36,6 +36,9 @@
     else if (last === 'respuestas-bateria-osakidetza') pageType = 'responses';
     else if (last === 'simulacro-osakidetza') pageType = 'simulacro';
     else if (last === 'ope-osakidetza-2026') pageType = 'ope_overview';
+    else if (last === 'fase-2-osakidetza-2026') pageType = 'phase_2';
+    else if (last === 'it-txartela-osakidetza') pageType = 'it_txartela';
+    else if (last === 'resultados-ope-osakidetza-2026') pageType = 'results';
     else if (last === 'privacy.html') pageType = 'privacy';
     else if (last === 'legal.html') pageType = 'legal';
     else if (last === '404.html') pageType = '404';
@@ -123,13 +126,13 @@
       return;
     }
 
-    if (abs.hostname === 'www.osakidetza.euskadi.eus' || abs.hostname === 'osakidetza.euskadi.eus') {
+    if (abs.hostname === 'www.osakidetza.euskadi.eus' || abs.hostname === 'osakidetza.euskadi.eus' || abs.hostname === 'www.euskadi.eus' || abs.hostname === 'euskadi.eus') {
       var isPdf = /\.pdf(?:$|\?)/i.test(abs.pathname + abs.search);
       capture('official_source_clicked', {
         link_position: positionOf(a),
         link_label: labelOf(a),
         resource_type: isPdf ? 'pdf' : 'portal',
-        source_kind: isPdf ? 'official_battery_or_document' : 'official_ope_portal',
+        source_kind: isPdf ? 'official_battery_or_document' : (abs.hostname.indexOf('euskadi.eus') !== -1 && abs.hostname.indexOf('osakidetza') === -1 ? 'official_bopv_or_euskadi' : 'official_ope_portal'),
         source_path: abs.pathname.slice(0, 300)
       });
       return;

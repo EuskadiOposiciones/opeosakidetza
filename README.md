@@ -1,34 +1,14 @@
-# OPE Osakidetza — Web V4
+# OPE Osakidetza — Web V6
 
 URL: https://euskadioposiciones.github.io/opeosakidetza/
 
-## Objetivo
-Micrositio SEO + conversión para la app Android `Test OPE Osakidetza 2023/2026`.
-
-## Arquitectura
-- `/` → intención general / producto
-- `/ope-osakidetza-2026/` → intención informativa de convocatoria
-- `/baterias-oficiales/` → búsqueda de baterías / PDFs / fuentes
-- `/respuestas-bateria-osakidetza/` → búsqueda de respuestas/corrección
-- `/simulacro-osakidetza/` → intención de práctica
-- 8 páginas de categoría → long-tail específico
-
-## Cambios V4
-- evidencia oficial arriba de la página
-- fuentes primarias enlazadas
-- recuentos de batería común + específica cuando están verificados
-- una intención principal por URL
-- enlaces internos semánticos
-- copia comercial basada en “prueba antes de pagar”
-- 25 preguntas gratis + pago único + sin suscripción
-- 1.000+ descargas como prueba social verificable en Google Play
-- distinción visible entre batería oficial y corrección de estudio
-- aviso de posibles correcciones/republicaciones oficiales
-- Search Console verification preservada
-- canonical + sitemap + robots
-- enlaces a Google Play con referrer de campaña
-- páginas no soportadas por la app NO se crean para evitar SEO débil
+Micrositio SEO + conversión para la app Android, con fuentes oficiales, estado de proceso y analítica cookieless.
 
 ## Publicación
-Subir TODO el contenido a la raíz del repositorio `opeosakidetza`, reemplazando los archivos existentes.
-No es necesario borrar los archivos `google*.html` ya existentes.
+Sube todo el contenido de esta carpeta a la raíz del repositorio `opeosakidetza`, reemplazando los archivos existentes. Conserva cualquier archivo `google*.html` que ya exista en el repositorio.
+
+## Verificación conservada
+La home mantiene la meta de Google Search Console: `44wRaJ8DvOACRlyMbS0QveYCZ3w7JP3kxnzYRkvq1b8`.
+
+## Analítica
+Se conserva PostHog EU cookieless y se amplía la clasificación a Fase II, IT Txartela, resultados y enlaces BOPV.
