@@ -122,3 +122,11 @@ footer{padding:38px 0 94px;border-top:1px solid var(--line);color:var(--muted);f
 .callout-plain{border:1px solid var(--line);background:#fff;border-radius:18px;padding:22px}
 @media(max-width:900px){.kpi-row{grid-template-columns:1fr 1fr}.trust-grid{grid-template-columns:1fr}.timeline-item{grid-template-columns:1fr;gap:3px}.inline-cta{align-items:flex-start;flex-direction:column}}
 @media(max-width:590px){.kpi-row{grid-template-columns:1fr 1fr}.source-strip{align-items:flex-start}.source-chip{border-radius:12px}.status-live{padding:18px}}
+
+/* V7 — mejoras SERP dirigidas */
+.quick-answer{background:linear-gradient(135deg,#f0fbf9,#fff);border:1px solid #cce6e2;border-radius:20px;padding:24px}.quick-answer h2{margin-top:0}.quick-answer p:last-child{margin-bottom:0}
+.columns-list{columns:3 250px;column-gap:30px;margin:0;padding-left:20px}.columns-list li{break-inside:avoid;margin:0 0 8px}
+.compare-table td:first-child{font-weight:800}.compare-table .yes{font-weight:800;color:var(--brand-dark)}
+.keyword-pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.keyword-pills span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 9px;font-size:.82rem;color:#48606a}
+.topic-list{display:grid;grid-template-columns:repeat(2,1fr);gap:10px 24px;padding-left:22px}.topic-list li{padding:4px 0}
+@media(max-width:760px){.columns-list{columns:1}.topic-list{grid-template-columns:1fr}}
