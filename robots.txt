@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://euskadioposiciones.github.io/opeosakidetza/sitemap.xml
+Sitemap: https://euskadioposiciones.com/opeosakidetza/sitemap.xml

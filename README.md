@@ -4,7 +4,7 @@ Versión orientada a trazabilidad, control de versiones y utilidad de estudio. V
 
 # OPE Osakidetza — Web V6
 
-URL: https://euskadioposiciones.github.io/opeosakidetza/
+URL: https://euskadioposiciones.com/opeosakidetza/
 
 Micrositio SEO + conversión para la app Android, con fuentes oficiales, estado de proceso y analítica cookieless.
 
