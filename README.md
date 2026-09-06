@@ -1,3 +1,7 @@
+## V9.3 — Fase II: baterías comunes + modelo de examen (06/09/2026)
+
+Se amplía `/fase-2-osakidetza-2026/` con la correspondencia oficial de las baterías comunes de 200/300 preguntas, práctica en app y características del modelo de examen. Ver `CHANGELOG-V9_3.md`.
+
 ## V9 — Centro de control de batería (30/08/2026)
 
 Versión orientada a trazabilidad, control de versiones y utilidad de estudio. Ver `CHANGELOG-V9.md`.
