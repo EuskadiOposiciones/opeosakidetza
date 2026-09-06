@@ -1,3 +1,7 @@
+## V9.8 — Fase II: Jurídico, Mantenimiento Instalaciones y Organización (06/09/2026)
+
+Tres nuevas fichas oficiales de Fase II y sitemap ampliado a 27 URLs. Ver `CHANGELOG-V9_8.md`.
+
 ## V9.4 — Directorio Fase II por categoría (06/09/2026)
 
 Se convierte el listado de 41 categorías de `/fase-2-osakidetza-2026/` en un directorio con plazas, grupo, batería común, resolución específica y preparación disponible en la app. Ver `CHANGELOG-V9_4.md`.
