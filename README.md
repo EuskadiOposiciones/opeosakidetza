@@ -1,3 +1,7 @@
+## V9.4 — Directorio Fase II por categoría (06/09/2026)
+
+Se convierte el listado de 41 categorías de `/fase-2-osakidetza-2026/` en un directorio con plazas, grupo, batería común, resolución específica y preparación disponible en la app. Ver `CHANGELOG-V9_4.md`.
+
 ## V9.3 — Fase II: baterías comunes + modelo de examen (06/09/2026)
 
 Se amplía `/fase-2-osakidetza-2026/` con la correspondencia oficial de las baterías comunes de 200/300 preguntas, práctica en app y características del modelo de examen. Ver `CHANGELOG-V9_3.md`.
