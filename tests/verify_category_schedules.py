@@ -14,6 +14,10 @@ SCHEDULE = {
     'tecnico-superior-organizacion': ('27/11/2026','12:00','BEC','Barakaldo'),
     'trabajador-social': ('27/11/2026','15:00','BEC','Barakaldo'),
     'tecnico-superior-economico': ('27/11/2026','15:00','BEC','Barakaldo'),
+    'cocinero': ('07/11/2026','17:30','Aulario Las Nieves','Vitoria-Gasteiz'),
+    'anatomia-patologica-citologia': ('08/11/2026','17:30','Aulario Las Nieves','Vitoria-Gasteiz'),
+    'enfermeria-salud-laboral': ('07/11/2026','13:30','Aulario Las Nieves','Vitoria-Gasteiz'),
+    'medico-emergencias': ('22/11/2026','13:30','Aulario Las Nieves','Vitoria-Gasteiz'),
 }
 EXPECTED = {
     'enfermeria-salud-mental': ('Enfermería Salud Mental Osakidetza 2026 | 95 plazas','Enfermero/a Salud Mental Osakidetza 2026: 95 plazas y Fase II','https://euskadioposiciones.com/opeosakidetza/enfermeria-salud-mental/'),
@@ -27,6 +31,10 @@ EXPECTED = {
     'tecnico-superior-organizacion': ('Técnico/a Superior Organización Osakidetza 2026 | 25 plazas','Técnico/a Superior Organización Osakidetza 2026: 25 plazas y Fase II','https://euskadioposiciones.com/opeosakidetza/tecnico-superior-organizacion/'),
     'trabajador-social': ('Trabajo Social Osakidetza 2026 | 33 plazas y batería','Trabajador/a Social Osakidetza 2026: 33 plazas y Fase II','https://euskadioposiciones.com/opeosakidetza/trabajador-social/'),
     'tecnico-superior-economico': ('Técnico/a Superior Económico/a Osakidetza 2026 | 31 plazas','Técnico/a Superior Económico/a Osakidetza 2026: 31 plazas y Fase II','https://euskadioposiciones.com/opeosakidetza/tecnico-superior-economico/'),
+    'cocinero': ('Cocinero/a Osakidetza 2026 | 15 plazas','Cocinero/a Osakidetza 2026: 15 plazas y Fase II','https://euskadioposiciones.com/opeosakidetza/cocinero/'),
+    'anatomia-patologica-citologia': ('Anatomía Patológica Osakidetza 2026 | 10 plazas','Técnico/a Anatomía Patológica y Citología Osakidetza 2026: 10 plazas','https://euskadioposiciones.com/opeosakidetza/anatomia-patologica-citologia/'),
+    'enfermeria-salud-laboral': ('Enfermería Salud Laboral Osakidetza 2026 | 9 plazas','Enfermero/a Salud Laboral Osakidetza 2026: 9 plazas y Fase II','https://euskadioposiciones.com/opeosakidetza/enfermeria-salud-laboral/'),
+    'medico-emergencias': ('Médico/a Emergencias Osakidetza 2026 | 15 plazas','Médico/a Emergencias Osakidetza 2026: 15 plazas y Fase II','https://euskadioposiciones.com/opeosakidetza/medico-emergencias/'),
 }
 
 errors=[]

@@ -20,7 +20,11 @@
     'oficial-mantenimiento-instalaciones': 'oficial_mantenimiento_instalaciones',
     'tecnico-superior-organizacion': 'tecnico_superior_organizacion',
     'tecnico-medio-administracion-gestion': 'tecnico_medio_administracion_gestion',
-    'trabajador-social': 'trabajador_social'
+    'trabajador-social': 'trabajador_social',
+    'cocinero': 'cocinero',
+    'anatomia-patologica-citologia': 'anatomia_patologica_citologia',
+    'enfermeria-salud-laboral': 'enfermeria_salud_laboral',
+    'medico-emergencias': 'medico_emergencias'
   };
 
   function cleanPath(pathname) {

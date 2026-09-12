@@ -18,6 +18,10 @@ modified={
 'https://euskadioposiciones.com/opeosakidetza/tecnico-superior-organizacion/',
 'https://euskadioposiciones.com/opeosakidetza/trabajador-social/',
 'https://euskadioposiciones.com/opeosakidetza/tecnico-superior-economico/',
+'https://euskadioposiciones.com/opeosakidetza/medico-emergencias/',
+'https://euskadioposiciones.com/opeosakidetza/enfermeria-salud-laboral/',
+'https://euskadioposiciones.com/opeosakidetza/anatomia-patologica-citologia/',
+'https://euskadioposiciones.com/opeosakidetza/cocinero/',
 }
 root=ET.parse(P).getroot(); got={}
 for u in root.findall('s:url',ns):
@@ -25,7 +29,7 @@ for u in root.findall('s:url',ns):
 errors=[]
 for url in modified:
     if got.get(url)!='2026-09-12': errors.append(f'{url}: lastmod={got.get(url)}')
-if len(got)!=27: errors.append(f'expected 27 URLs, found {len(got)}')
+if len(got)!=31: errors.append(f'expected 31 URLs, found {len(got)}')
 if errors:
     print('FAIL'); [print(' -',e) for e in errors]; sys.exit(1)
-print('PASS: sitemap válido; 14 URLs realmente modificadas con lastmod 2026-09-12')
+print('PASS: sitemap válido; 18 URLs realmente modificadas con lastmod 2026-09-12')
