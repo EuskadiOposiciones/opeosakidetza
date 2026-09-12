@@ -1,0 +1,17 @@
+OSAKIDETZA — FASE II COMPLETA — 12/09/2026
+
+Este paquete incluye el parche anterior (Home + Fase II + Radiodiagnóstico + analítica V10) y añade 11 fichas individuales de Fase II con fecha, hora y sede exactas, además del sitemap actualizado.
+
+SUBIDA
+1. Descomprime este ZIP.
+2. Abre el repositorio EuskadiOposiciones/opeosakidetza en la rama main.
+3. Add file -> Upload files.
+4. Arrastra EL CONTENIDO de esta carpeta descomprimida (no el ZIP).
+5. Commit changes.
+
+SEO PROTEGIDO
+- No se cambian URLs, titles, H1 ni canonicals de las 11 fichas.
+- Los lastmod solo cambian a 12/09/2026 en URLs realmente modificadas.
+
+FUENTE DEL CALENDARIO
+Gobierno Vasco / Irekia, 10/09/2026: calendario de la segunda fase de la OPE Osakidetza.
