@@ -1,42 +1,47 @@
-OSAKIDETZA V12 — GUÍA COMPLETA DE CADA OPE — 15 FICHAS — 13/09/2026
+OSAKIDETZA V13 — CONVERSIÓN A LA APP + LENGUAJE PRÁCTICO DE BATERÍAS
+Fecha: 13/09/2026
 
 OBJETIVO
-Las 15 fichas de Fase II ya publicadas incorporan una explicación integrada y legible de cómo funciona su proceso selectivo:
-- concurso-oposición de principio a fin;
-- formato real del examen según las bases específicas;
-- 50/100 para aprobar y ausencia de penalización por errores;
-- teoría 65 % + práctica 35 % solo donde corresponde;
-- puntuación final = oposición + concurso (sin falso 60/40 final);
-- experiencia profesional, formación/docencia/investigación y euskera;
-- ejemplo de cálculo de puntos;
-- qué ocurre después del examen, desempates y conservación de nota;
-- requisitos, enlaces a bases generales y específicas;
-- navegación por anclas, tablas, desplegables y headings orientados a lectura + SEO.
+- Mejorar el paso web → Google Play sin alterar los ganadores SEO.
+- Sustituir lenguaje interno/metodológico por utilidad directa para el opositor:
+  hacer preguntas, repetir fallos, consultar estadísticas y comprobar evolución.
 
-SEO PROTEGIDO
-- No se cambian URL, title, H1 ni canonical de ninguna de las 15 fichas.
-- Se amplían las meta descriptions para cubrir examen, puntuación, méritos, experiencia y euskera.
-- dateModified pasa a 2026-09-13 en las 15 fichas realmente modificadas.
-- sitemap.xml actualiza a 2026-09-13 solo esas 15 URLs.
+QUÉ CAMBIA
+1. 15 fichas de Fase II + Radiodiagnóstico
+   - Nuevo bloque «Tu batería en la app».
+   - Número de preguntas adaptado a cada categoría.
+   - 25 preguntas gratis.
+   - Estadísticas, repetición de preguntas falladas, modo examen y temporizador.
+   - Pago único y sin suscripción.
+   - Las categorías que solo tienen batería común NO afirman que la específica esté en la app.
+   - Radiodiagnóstico sí muestra 500 preguntas: 200 comunes + 300 específicas.
 
-SUBIDA
-1. Descomprime este ZIP.
-2. Abre EuskadiOposiciones/opeosakidetza en main.
-3. Add file -> Upload files.
-4. Arrastra EL CONTENIDO de la carpeta descomprimida a la raíz de main, conservando carpetas.
-5. Commit changes.
+2. Fase II
+   - El hero ya no manda directamente a Google Play: primero ayuda a encontrar categoría y batería.
+   - Después de explicar 200/300 preguntas aparece el puente principal hacia la app.
 
-ARCHIVOS
-- 15 carpetas de categorías /index.html
-- sitemap.xml
-- tests/verify_ope_explained_20260913.py
-- tests/verify_category_schedules.py
-- tests/verify_sitemap_20260912.py
-- INSTRUCCIONES.txt
+3. Home
+   - Se elimina lenguaje como «método», «cobertura» o «consolidación» en la explicación de estudio.
+   - Se centra en: haz preguntas → repite fallos → mira estadísticas → mejora.
 
-NOTA
-Este paquete es deliberadamente mínimo: no sustituye la home, la página central de Fase II ni assets/analytics.js.
+4. Analítica
+   - El CTA principal de batería se mide como cta_position=battery_bridge.
+   - El CTA fijo móvil aparece solo después de recorrer al menos el 25 % de la página.
+   - Se mantiene la medición cookieless existente.
 
-FUENTES PRINCIPALES
-- Bases generales: Resolución 120/2026 (BOPV 04/02/2026), modificada por Resolución 443/2026.
-- Bases específicas: Resoluciones 872/2026, 876/2026 y 879–885/2026 según categoría.
+5. SEO
+   - NO cambian URLs, titles, H1 ni canonicals.
+   - Sitemap: solo se actualizan a 13/09/2026 las URLs modificadas que antes tenían otra fecha.
+
+DESPLIEGUE
+1. Descomprime el ZIP.
+2. En GitHub abre EuskadiOposiciones/opeosakidetza → main.
+3. Add file → Upload files.
+4. Arrastra EL CONTENIDO de esta carpeta a la raíz de main conservando las carpetas.
+5. Confirma el commit.
+
+VERIFICACIÓN
+La V13 se ha probado contra las regresiones existentes de Fase II, calendario, explicación de la OPE, sitemap y SEO, además del nuevo test:
+  python tests/verify_v13_app_conversion_20260913.py
+
+No es necesario modificar Google Search Console ni PostHog para desplegar estos archivos.

@@ -1,6 +1,6 @@
 /* OPE Osakidetza — PostHog EU, privacidad por diseño.
  * Medición cookieless: sin cookies, localStorage ni sessionStorage de PostHog.
- * V10: atribución por host real, taxonomía Fase II e impresiones de CTA a Google Play.
+ * V11: puente de batería medible, posiciones explícitas y sticky móvil diferido.
  */
 (function () {
   'use strict';
@@ -8,6 +8,7 @@
   var POSTHOG_TOKEN = 'phc_nyXj9NDnjEt7ngcrAuSZT8jPN9mkqW5ySCBNtLp6SMWH';
   var API_HOST = 'https://eu.i.posthog.com';
   var UI_HOST = 'https://eu.posthog.com';
+  var MOBILE_STICKY_REVEAL_SCROLL = 0.25; // battery_bridge remains the main conversion CTA.
   var CATEGORY_SLUGS = {
     'celador': 'celador', 'operario': 'operario', 'tcae': 'tcae',
     'auxiliar-administrativo': 'auxiliar_administrativo', 'administrativo': 'administrativo',
@@ -52,6 +53,8 @@
   }
   function positionOf(el) {
     if (!el) return 'unknown';
+    var explicit = el.getAttribute && el.getAttribute('data-cta-position');
+    if (explicit) return explicit;
     if (el.closest && el.closest('.mobile-cta')) return 'mobile_sticky';
     if (el.closest && el.closest('header')) return 'header';
     if (el.closest && (el.closest('.hero') || el.closest('.category-hero'))) return 'hero';
@@ -70,6 +73,29 @@
   !function(t,e){var o,n,p,r;e.__SV||(window.posthog&&window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split('.');2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}p||((p=t.createElement('script')).type='text/javascript',p.crossOrigin='anonymous',p.async=!0,p.src=s.api_host.replace('.i.posthog.com','-assets.i.posthog.com')+'/static/array.js',p.onerror=function(){p=null},(r=t.getElementsByTagName('script')[0]).parentNode.insertBefore(p,r));var u=e;for(void 0!==a?u=e[a]=[]:a='posthog',u.people=u.people||[],u.toString=function(t){var e='posthog';return'posthog'!==a&&(e+='.'+a),t||(e+=' (stub)'),e},u.people.toString=function(){return u.toString(1)+'.people (stub)'},o='init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagResult isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug'.split(' '),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
 
   window.posthog.init(POSTHOG_TOKEN, {api_host:API_HOST,ui_host:UI_HOST,defaults:'2026-05-30',cookieless_mode:'always',person_profiles:'never',autocapture:false,capture_pageview:false,capture_pageleave:true,capture_dead_clicks:false,capture_heatmaps:false,capture_performance:false,capture_exceptions:false,disable_session_recording:true,disable_surveys:true,respect_dnt:true});
+
+
+
+  function setupDelayedMobileCta() {
+    var bars = Array.prototype.slice.call(document.querySelectorAll('.mobile-cta'));
+    if (!bars.length || !window.matchMedia || !window.matchMedia('(max-width: 590px)').matches) return;
+    bars.forEach(function (bar) { bar.style.display = 'none'; });
+    var revealed = false;
+    function maybeReveal() {
+      if (revealed) return;
+      var doc = document.documentElement;
+      var max = Math.max(1, doc.scrollHeight - window.innerHeight);
+      var ratio = Math.max(0, window.scrollY) / max;
+      if (ratio >= MOBILE_STICKY_REVEAL_SCROLL) {
+        revealed = true;
+        bars.forEach(function (bar) { bar.style.display = ''; });
+        window.removeEventListener('scroll', maybeReveal);
+      }
+    }
+    window.addEventListener('scroll', maybeReveal, { passive: true });
+    maybeReveal();
+  }
+  setupDelayedMobileCta();
 
   var playLinks = Array.prototype.slice.call(document.querySelectorAll('a[href*="play.google.com/store/apps/details"]'));
   playLinks.forEach(function (a) {
