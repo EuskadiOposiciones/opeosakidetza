@@ -1,22 +1,42 @@
-OSAKIDETZA V11 — 4 nuevas categorías Fase II — 12/09/2026
+OSAKIDETZA V12 — GUÍA COMPLETA DE CADA OPE — 15 FICHAS — 13/09/2026
 
-Arrastrar el CONTENIDO de esta carpeta a la raíz de main del repositorio
-EuskadiOposiciones/opeosakidetza, conservando la estructura de carpetas.
+OBJETIVO
+Las 15 fichas de Fase II ya publicadas incorporan una explicación integrada y legible de cómo funciona su proceso selectivo:
+- concurso-oposición de principio a fin;
+- formato real del examen según las bases específicas;
+- 50/100 para aprobar y ausencia de penalización por errores;
+- teoría 65 % + práctica 35 % solo donde corresponde;
+- puntuación final = oposición + concurso (sin falso 60/40 final);
+- experiencia profesional, formación/docencia/investigación y euskera;
+- ejemplo de cálculo de puntos;
+- qué ocurre después del examen, desempates y conservación de nota;
+- requisitos, enlaces a bases generales y específicas;
+- navegación por anclas, tablas, desplegables y headings orientados a lectura + SEO.
 
-Nuevas fichas:
-- cocinero/
-- anatomia-patologica-citologia/
-- enfermeria-salud-laboral/
-- medico-emergencias/
+SEO PROTEGIDO
+- No se cambian URL, title, H1 ni canonical de ninguna de las 15 fichas.
+- Se amplían las meta descriptions para cubrir examen, puntuación, méritos, experiencia y euskera.
+- dateModified pasa a 2026-09-13 en las 15 fichas realmente modificadas.
+- sitemap.xml actualiza a 2026-09-13 solo esas 15 URLs.
 
-Archivos existentes que se sustituyen:
-- fase-2-osakidetza-2026/index.html
-- assets/analytics.js
+SUBIDA
+1. Descomprime este ZIP.
+2. Abre EuskadiOposiciones/opeosakidetza en main.
+3. Add file -> Upload files.
+4. Arrastra EL CONTENIDO de la carpeta descomprimida a la raíz de main, conservando carpetas.
+5. Commit changes.
+
+ARCHIVOS
+- 15 carpetas de categorías /index.html
 - sitemap.xml
+- tests/verify_ope_explained_20260913.py
 - tests/verify_category_schedules.py
 - tests/verify_sitemap_20260912.py
+- INSTRUCCIONES.txt
 
-Test nuevo:
-- tests/verify_category_expansion_20260912.py
+NOTA
+Este paquete es deliberadamente mínimo: no sustituye la home, la página central de Fase II ni assets/analytics.js.
 
-No se modifica la home ni otras fichas de categoría.
+FUENTES PRINCIPALES
+- Bases generales: Resolución 120/2026 (BOPV 04/02/2026), modificada por Resolución 443/2026.
+- Bases específicas: Resoluciones 872/2026, 876/2026 y 879–885/2026 según categoría.

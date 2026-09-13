@@ -48,7 +48,7 @@ for slug,(date,time,venue,city) in SCHEDULE.items():
     if f'<title>{title}</title>' not in s: errors.append(f'{slug}: title changed')
     if f'<h1>{h1}</h1>' not in s: errors.append(f'{slug}: H1 changed')
     if f'href="{canonical}" rel="canonical"' not in s: errors.append(f'{slug}: canonical changed')
-    if '"dateModified":"2026-09-12"' not in s: errors.append(f'{slug}: dateModified not 2026-09-12')
+    if '"dateModified":"2026-09-13"' not in s: errors.append(f'{slug}: dateModified not 2026-09-13')
     if date not in s: errors.append(f'{slug}: missing date {date}')
     if time not in s: errors.append(f'{slug}: missing time {time}')
     if venue not in s or city not in s: errors.append(f'{slug}: missing venue/city')

@@ -3,10 +3,7 @@ import xml.etree.ElementTree as ET, sys
 ROOT=Path(__file__).resolve().parents[1]
 P=ROOT/'sitemap.xml'
 ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
-modified={
-'https://euskadioposiciones.com/opeosakidetza/',
-'https://euskadioposiciones.com/opeosakidetza/fase-2-osakidetza-2026/',
-'https://euskadioposiciones.com/opeosakidetza/radiodiagnostico/',
+categories={
 'https://euskadioposiciones.com/opeosakidetza/enfermeria-salud-mental/',
 'https://euskadioposiciones.com/opeosakidetza/matrona/',
 'https://euskadioposiciones.com/opeosakidetza/auxiliar-farmacia/',
@@ -18,18 +15,18 @@ modified={
 'https://euskadioposiciones.com/opeosakidetza/tecnico-superior-organizacion/',
 'https://euskadioposiciones.com/opeosakidetza/trabajador-social/',
 'https://euskadioposiciones.com/opeosakidetza/tecnico-superior-economico/',
-'https://euskadioposiciones.com/opeosakidetza/medico-emergencias/',
-'https://euskadioposiciones.com/opeosakidetza/enfermeria-salud-laboral/',
-'https://euskadioposiciones.com/opeosakidetza/anatomia-patologica-citologia/',
 'https://euskadioposiciones.com/opeosakidetza/cocinero/',
+'https://euskadioposiciones.com/opeosakidetza/anatomia-patologica-citologia/',
+'https://euskadioposiciones.com/opeosakidetza/enfermeria-salud-laboral/',
+'https://euskadioposiciones.com/opeosakidetza/medico-emergencias/',
 }
 root=ET.parse(P).getroot(); got={}
 for u in root.findall('s:url',ns):
     loc=u.findtext('s:loc',namespaces=ns); lm=u.findtext('s:lastmod',namespaces=ns); got[loc]=lm
 errors=[]
-for url in modified:
-    if got.get(url)!='2026-09-12': errors.append(f'{url}: lastmod={got.get(url)}')
+for url in categories:
+    if got.get(url)!='2026-09-13': errors.append(f'{url}: lastmod={got.get(url)}')
 if len(got)!=31: errors.append(f'expected 31 URLs, found {len(got)}')
 if errors:
     print('FAIL'); [print(' -',e) for e in errors]; sys.exit(1)
-print('PASS: sitemap válido; 18 URLs realmente modificadas con lastmod 2026-09-12')
+print('PASS: sitemap válido; 15 fichas actualizadas con lastmod 2026-09-13; 31 URLs totales')
