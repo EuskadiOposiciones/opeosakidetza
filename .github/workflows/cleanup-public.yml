@@ -1,0 +1,126 @@
+name: One-shot public cleanup
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Clean public copy and internal docs
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+
+          replacements = {
+              "ope-osakidetza-2026/index.html": [
+                  (
+                      "Osakidetza señala que todas las preguntas de los ejercicios se extraerán del conjunto publicado. Por eso esta web organiza la navegación alrededor de <strong>proceso → categoría → bases → batería → práctica</strong>, en lugar de usar un blog de consejos genéricos.",
+                      "Osakidetza señala que todas las preguntas de los ejercicios se extraerán del conjunto publicado. Para prepararlo, puedes seguir el recorrido <strong>proceso → categoría → bases → batería → práctica</strong>."
+                  )
+              ],
+              "baterias-oficiales/index.html": [
+                  (
+                      "Esta tabla se limita a las categorías que actualmente cubre la app; no fabricamos páginas para perfiles que todavía no ofrecemos.",
+                      "Esta tabla muestra las categorías que actualmente cubre la app."
+                  )
+              ],
+              "respuestas-bateria-osakidetza/index.html": [
+                  (
+                      "No son categorías de nuestra app, pero el precedente justifica una regla editorial: <strong>nunca ocultar una corrección oficial posterior</strong>.",
+                      "No son categorías cubiertas por nuestra app, pero muestran por qué conviene comprobar siempre la versión vigente y cualquier corrección oficial posterior."
+                  )
+              ]
+          }
+
+          for filename, reps in replacements.items():
+              p=Path(filename)
+              text=p.read_text(encoding="utf-8")
+              for old,new in reps:
+                  if old not in text:
+                      raise SystemExit(f"No se encontró el texto esperado en {filename}: {old}")
+                  text=text.replace(old,new)
+              p.write_text(text,encoding="utf-8")
+
+          Path("README.md").write_text(
+              "# EuskadiOposiciones · OPE Osakidetza\n\n"
+              "Sitio público de información y práctica para la OPE Osakidetza.\n\n"
+              "Web: https://euskadioposiciones.com/opeosakidetza/\n\n"
+              "Proyecto independiente. Las publicaciones oficiales de Osakidetza prevalecen siempre.\n",
+              encoding="utf-8"
+          )
+
+          p=Path("sitemap.xml")
+          text=p.read_text(encoding="utf-8")
+          for slug in [
+              "ope-osakidetza-2026/",
+              "baterias-oficiales/",
+              "respuestas-bateria-osakidetza/"
+          ]:
+              pattern=re.compile(
+                  r"(<loc>https://euskadioposiciones\.com/opeosakidetza/"
+                  + re.escape(slug)
+                  + r"</loc>\s*<lastmod>)\d{4}-\d{2}-\d{2}(</lastmod>)"
+              )
+              text,n=pattern.subn(r"\g<1>2026-09-28\2",text)
+              if n != 1:
+                  raise SystemExit(f"No se pudo actualizar lastmod de {slug}; coincidencias={n}")
+          p.write_text(text,encoding="utf-8")
+
+          delete_files = [
+              "AUDIT-V9.json",
+              "AUDITORIA-SEO-V6.md",
+              "AUDITORIA-SEO-V9.md",
+              "AUDITORIA-SERP-V7.md",
+              "AUDITORIA-SERP-V8.md",
+              "CHANGELOG-V4.md",
+              "CHANGELOG-V5.md",
+              "CHANGELOG-V6.md",
+              "CHANGELOG-V7.md",
+              "CHANGELOG-V8.md",
+              "CHANGELOG-V9.md",
+              "CHANGELOG-V9_3.md",
+              "CHANGELOG-V9_4.md",
+              "CHANGELOG-V9_5.md",
+              "CHANGELOG-V9_6.md",
+              "CHANGELOG-V9_7.md",
+              "CHANGELOG-V9_8.md",
+              "INSTRUCCIONES.txt",
+              "POSTHOG-SETUP.md",
+              "SEO-DEPLOY.txt",
+          ]
+          for filename in delete_files:
+              p=Path(filename)
+              if p.exists():
+                  p.unlink()
+
+          # El workflow es de un solo uso: desaparece del repo en el mismo commit.
+          Path(".github/workflows/cleanup-public.yml").unlink()
+
+      - name: Verify cleanup
+        shell: bash
+        run: |
+          ! grep -R "no fabricamos páginas" -n baterias-oficiales/index.html
+          ! grep -R "regla editorial" -n respuestas-bateria-osakidetza/index.html
+          ! grep -R "en lugar de usar un blog de consejos genéricos" -n ope-osakidetza-2026/index.html
+          test ! -e AUDITORIA-SEO-V9.md
+          test ! -e INSTRUCCIONES.txt
+          test ! -e POSTHOG-SETUP.md
+
+      - name: Commit cleanup
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Clean public copy and remove internal strategy docs"
+          git push origin main
